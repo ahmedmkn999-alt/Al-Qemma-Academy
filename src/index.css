@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0f172a; /* كحلي غامق جداً */
+  color: white;
+  direction: rtl; /* عشان المنصة عربي */
+}
+
+/* خلفية النجوم العظمة */
+.stars-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -1;
+  background: black url(https://cdn.rawgit.com/WebpageFX/d3-particles/master/demo/particles.png) repeat;
+  animation: moveStars 100s linear infinite;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+/* منع التحديد عشان الحماية */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
